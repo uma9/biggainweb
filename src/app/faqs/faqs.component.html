@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+            
+        
+<form [formGroup]='formName' class="addnew">
+      <div class="col-12">
+              
+            <button type="button" 
+            id="addNewSocial" type="button" (click)='addInput()'>
+                 <span class="plus-sign">+</span>
+              Add New    </button>
+          </div>
+   <div class="card-body" formArrayName="controllerArray" >
+     
+      
+
+
+
+
+
+   <div class="row">
+      <div class="col-12  mar-btm" *ngFor="let item of formName.controls.controllerArray.controls; let i=index"
+      [formGroupName]="i">
+          
+
+      <div id="faqs_info_sortable_container">
+    
+
+            <div class="directorist row atbdp_faqs_wrapper" id="faqsID-0" style="margin-bottom: 10px">
+                <div class="col-md-4 col-sm-12">
+                    <div class="form-group">
+                       <!-- <label></label>-->
+                        <input type="text"  placeholder="Question" name="faqs[][quez]"
+                         id="atbdp_social" value="" class="form-control atbdp_faqs_quez inputs">
+            
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <!--<label></label>-->
+                         <div id="wp-0-wrap" class="wp-core-ui wp-editor-wrap html-active"><link rel="stylesheet" id="dashicons-css" href="https://directorist.com/theme/demo/dlist/wp-includes/css/dashicons.min.css?ver=5.2.3" type="text/css" media="all">
+            <link rel="stylesheet" id="editor-buttons-css" href="https://directorist.com/theme/demo/dlist/wp-includes/css/editor.min.css?ver=5.2.3" type="text/css" media="all">
+            <div id="wp-0-editor-tools" class="wp-editor-tools hide-if-no-js">
+                    <div class="upload-btn-wrapper wp-media-buttons" id="wp-0-media-buttons">
+                            <button class="btn1 button insert-media add_media" id="insert-media-button" 
+                            data-editor="0">
+                                <span class="wp-media-buttons-icon"></span> Add Media</button>
+                            
+                            <input type="file" name="myfile" />
+                          </div>
+            <div class="wp-editor-tabs">
+            <button type="button" id="0-html" class="wp-switch-editor switch-html" 
+            data-wp-editor-id="0">Text</button>
+            </div>
+            </div>
+            <div id="wp-0-editor-container" class="wp-editor-container">
+                <div id="qt_0_toolbar" class="quicktags-toolbar"></div>
+                <textarea class="wp-editor-area inputs" rows="8" autocomplete="off" 
+                cols="40" name="faqs[0][ans]" id="0">Answer..</textarea></div>
+            </div>
+            
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12" style="text-align: center">
+                    <span data-id="0" class="removeFAQSField dashicons dashicons-trash" 
+                    title="Remove this item" (click)='removeInput(i)'></span>
+                    
+                </div>
+            </div>
+            </div>
+
+          <!-- <div class="form-group col-md-2 col-xs-12 text-right">
+            <button class="btn btn-dan trash" type="button" (click)='removeInput(i)'> 
+               
+                <span class="lid"></span>
+                <span class="can"></span>
+            </button>
+            
+            
+                
+            
+          </div> -->
+        </div>
+      </div>
+    </div>
+ </form>
+ 
+ 

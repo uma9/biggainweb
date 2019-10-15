@@ -1,0 +1,6 @@
+@media (min-width: 100px) and (max-width: 991px){
+span.hiden{
+    display: none;
+    font-size:5px;
+  }
+}

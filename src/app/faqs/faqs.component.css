@@ -1,0 +1,114 @@
+.btn-dan{
+    background:#f51957
+}
+.trash {
+    width: 30px;
+    height: 22px;
+    opacity: 0.8;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-transition: opacity 200ms;
+      
+      
+    top: 30%;
+    right: 50%;
+    position: absolute;
+    
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    padding: 0;
+}
+    
+.lid {
+    -webkit-transform-origin: -7% 100%;
+    -webkit-transition: -webkit-transform 150ms;
+    height: 6px;
+    width: 14px;
+    background: url('http://f.cl.ly/items/0R1Y2w3H2t033u1i132E/trash.png') 0 0 no-repeat;
+    left: 8px;
+    position: absolute;
+    right: 8px;
+    top: 2px;
+}
+    
+.trash:hover .lid {
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: -webkit-transform 250ms;
+}
+    
+.can {
+    height: 12px;
+    margin-left: 1px;
+    margin-right: 2px;
+    margin-top: 4px;
+    width: 11px;
+    background: url('http://f.cl.ly/items/0R1Y2w3H2t033u1i132E/trash.png') -1px -4px no-repeat;
+    left: 8px;
+    position: absolute;
+    right: 8px;
+    top: 2px;
+}
+
+@media screen and (max-width: 992px) {
+    form.addnew{
+        margin-right: -30px;
+        margin-left:-30px;
+    }
+    .col-12.mar-btm{
+        margin-bottom: 8px
+    }
+}
+
+#addNewSocial {
+    line-height: 40px;
+    padding: 0 20px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background: rgba(253, 73, 86, 0.1) !important;
+    border: 0 none;
+    font-weight: 600;
+    color: #fd4956;
+    font-size: 14px;
+}
+.inputs{
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #dbdaf74a;
+    background-clip: padding-box;
+    border: 1px solid #dbdaf7;
+    height: auto;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #495057;
+}
+
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn1 {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    
+    border-radius: 8px;
+    
+    
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }

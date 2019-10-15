@@ -1,0 +1,20 @@
+<kendo-upload
+        [autoUpload]="false"
+        [saveUrl]="uploadSaveUrl"
+        [removeUrl]="uploadRemoveUrl"
+        [restrictions]="uploadRestrictions"
+        (select)="selectEventHandler($event)"
+        (clear)="clearEventHandler($event)"
+        (remove)="removeEventHandler($event)"
+        (complete)="completeEventHandler($event)" >
+      </kendo-upload>
+
+      <event-log title="Event log" [events]="events"></event-log>
+
+      <div *ngIf="imagePreviews.length" class="img-preview example-config">
+        <h3>Preview selected images</h3>
+        <img *ngFor="let image of imagePreviews"
+          [src]="image.src"
+          alt="image preview"
+          style="width: 200px; margin: 10px;" />
+      </div>

@@ -1,0 +1,611 @@
+<link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+<section class="page-area">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="">
+          <div id="directorist" class="directorist atbd_wrapper atbd_add_listing_wrapper">
+            <div class="">
+              <form action="/theme/demo/dlist/add-your-listing/?plan=1882" method="post">
+                <fieldset>
+                  <div class="atbdp-form-fields">
+                    <div class="atbd_add_listing_title">
+                      <h3 class="atbd_wrapper1">Add New</h3>
+                    </div>
+                    <div class="atbd_listing_type">
+                      <h4>Choose listing type</h4>
+                      
+                      <mat-radio-group aria-label="Select an option">
+                          <div class="col-md-6 col-xs-12">
+                            <mat-radio-button value="1" style="    border-style: none;">  <h5 class="clr">Regular listing</h5></mat-radio-button>
+                            <span class="atbdp_make_str_green"> (5 Remaining)</span>
+                          </div>
+                          <div class="col-md-6 col-xs-12">
+                            <mat-radio-button style="border-width: 5px;" value="2">  
+                              <h5 class="clr">Featured listing</h5>
+                            </mat-radio-button>
+                            <span class="atbdp_make_str_green"> (5 Remaining)</span>
+                          </div>
+                        </mat-radio-group>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="row">
+                          <div class="col-md-12">
+                            <div class="atbd_content_module atbd_general_information_module">
+                              <div class="atbd_content_module__tittle_area">
+                                  <div class="atbd_area_title">
+                                    <h4 class="atbd_wrapper1">General information</h4>
+                                  </div>
+                              </div>
+                              <div class="atbdb_content_module_contents">
+                                  <div class="form-group" id="atbdp_listing_title">
+                                    <label for="listing_title">Title:<span class="atbdp_make_str_red"> *</span></label>
+                                    <input type="text" name="listing_title" value="" class="form-control directory_field" placeholder="Enter a title">
+                                  </div>
+                              
+
+                                  
+                              
+                                  <div class="form-group" id="atbdp_listing_title">
+                                    <label for="listing_title">Tagline:
+                                      </label>
+                                    <input type="text" name="listing_title" value="" class="form-control directory_field" placeholder="Enter a title">
+                                  </div>
+                                  
+                                  <div class="form-group" id="atbdp_listing_title">
+                                    <label for="listing_title">Pricing:
+                                      </label>
+                                      <p>
+                                          <mat-radio-group aria-label="Select an option">
+                                              <div class="col-md-4 col-xs-12">
+                                                <mat-radio-button value="0" 
+                                                (click)="isCollapsed = !isCollapsed"
+                                                [attr.aria-expanded]="!isCollapsed" 
+                                                aria-controls="collapseExample">  
+                                                <h5 class="mat-radio-button1"> Price [USD]</h5></mat-radio-button>
+                                                
+                                              </div>
+                                              <div class="col-md-1 col-xs-12">
+                                                  <h5 style="text-align:center;"> OR</h5>
+                                              </div>
+                                              <div class="col-md-6 col-xs-12">
+                                                <mat-radio-button style="border-width: 5px;" value="1"
+                                                (click)="isCollapsed1 = !isCollapsed1"
+                                                [attr.aria-expanded]="!isCollapsed1" 
+                                                aria-controls="collapseExample1">  
+                                                  <h5 class="mat-radio-button1">Price Range   </h5>
+                                                 
+                                                </mat-radio-button>
+                                                <span class="atbdp_make_str_green" 
+                                                  style="color:black;font-size:12px;"> 
+                                                  (Optional - Uncheck to hide pricing for this listing)</span> 
+                                                 
+                                              </div>
+                                            </mat-radio-group>
+                                        
+                                          </p>
+                                    
+                                      <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                                        <input type="text" name="listing_title" value="" class="form-control directory_field" placeholder="Enter a title">
+                                      </div>
+                                      <div id="collapseExample1" [ngbCollapse]="isCollapsed1">
+                                          
+                                          <select name="custom_field[713]" class="form-control directory_field">
+                                              <option value="Credit Card Payment">Credit Card Payment</option>
+                                              <option value="Bank Transfer">Bank Transfer</option>
+                                            </select>
+                                        </div>
+                                  </div>
+
+
+                              <div class="clearfix"></div>
+                                  
+
+
+
+
+
+                                  <div class="form-group" id="atbdp_custom_field_area">
+                                    <label for="">Custom Select Option                                            
+
+                                    </label>
+                                    <div>
+                                      <select name="custom_field[713]" class="form-control directory_field">
+                                        <option value="Credit Card Payment">Credit Card Payment</option>
+                                        <option value="Bank Transfer">Bank Transfer</option>
+                                      </select>
+                                    </div>                                        
+                                  </div>
+
+                                  <div class="form-group" id="atbdp_custom_field_area">
+                                    <label for="">Custom field 1<span style="color: red"> *</span>                                            </label>
+                                    <div><input type="text" name="custom_field[711]" class="form-control directory_field" placeholder="" value=""></div>                                      
+                                  </div>
+
+                                  <div class="form-group" id="atbdp_custom_field_area">
+                                    <label for="">Custom Field 2                                          
+                                        </label>
+                                    <div><input type="text" name="custom_field[721]" class="form-control directory_field" placeholder="" value=""></div>                                        
+                                  </div>
+                                  <div class="form-group" id="atbdp_custom_field_area">
+                                    <label for="">Custom Textarea<span class="atbd_tooltip atbd_tooltip--fw" aria-label="Maecenas vestibulum mollis diam. Vestibulum eu odio. Etiam vitae tortor. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac, leo. Curabitur nisi."> <i class="fa fa-question-circle"></i></span>                                            </label>
+                                    <div><textarea class="form-control directory_field" name="custom_field[714]" rows="0" placeholder=""></textarea></div>                                     
+                                  </div>
+
+                                  <div class="form-group" id="atbdp_locations">
+                                      <label for="at_biz_dir-location">Location:</label>
+                                    <ejs-multiselect id='localData' #local [dataSource]='location'
+                                    [fields]='locallocations' [placeholder]='locallocation'></ejs-multiselect> 
+                                    </div>
+
+ 
+
+                                  <div class="form-group" id="atbdp_locations">
+                                    <label for="at_biz_dir-location">Select Category:</label>
+                                  <ejs-multiselect id='localData' #local [dataSource]='countries'
+                                  [fields]='localFields' [placeholder]='localWaterMark'></ejs-multiselect> 
+                                  </div>
+
+
+                                  <div class="form-group" id="atbdp_locations">
+                                      <label for="at_biz_dir-location">Tag:</label>
+                                    <ejs-multiselect id='localData' #local [dataSource]='tag'
+                                    [fields]='localtags' [placeholder]='localtag'></ejs-multiselect> 
+                                    </div>
+                                  
+
+      
+ 
+
+
+
+
+ 
+                             </div>
+
+                            </div>
+                          </div>
+                      </div>
+                
+
+<div class="clearfix"></div>
+
+
+                      <div class="atbd_content_module atbd_contact_information">
+                          <div class="atbd_content_module__tittle_area">
+                              <div class="atbd_area_title">
+                                  <h4 class="atbd_wrapper1">Contact Information</h4>
+                              </div>
+                          </div>
+
+                          <div class="atbdb_content_module_contents">
+                              <label for="tue_cls" class="atbd_mark_as_closed" style="color:#272b41db">
+                                  <input type="checkbox" name="contact-info" 
+                                  value="1" id="" >  Check it to hide Contact Information
+                                  <span class="cf-select"></span>
+                                </label>
+                             
+
+                                  <div class="form-group" id="atbdp_zip">
+                                      <label for="atbdp_zip">Zip/Post Code:</label>
+
+                                      <input type="text" id="atbdp_zip" name="zip" value="" class="form-control directory_field" placeholder="Enter Zip/Post Code">
+                                  </div>
+                              
+                                 <div class="form-group" id="atbdp_phone">
+                                      <label for="atbdp_phone_number">Phone:</label>
+                                      <input type="tel" name="phone" id="atbdp_phone_number" value="" class="form-control directory_field" placeholder="Phone Number">
+                                  </div>
+                                  <div class="form-group" id="atbdp_phone2">
+                                      <label for="atbdp_phone_number2">Phone 2:</label>
+                                      <input type="tel" name="phone2" id="atbdp_phone_number2" value="" class="form-control directory_field" placeholder="Phone Number 2">
+                                  </div>
+                                  <div class="form-group" id="atbdp_fax">
+                                      <label for="atbdp_fax">Fax:</label>
+                                      <input type="tel" name="fax" id="atbdp_fax" value="" class="form-control directory_field" placeholder="Enter Fax">
+                                  </div>
+                                  <div class="form-group" id="atbdp_emails">
+                                      <label for="atbdp_email">Email:</label>
+                                      <input type="email" name="email" id="atbdp_email" value="" class="form-control directory_field" placeholder="Enter Email">
+                                  </div>
+                                   <div class="form-group" id="atbdp_webs">
+                                      <label for="atbdp_website">Website:</label>
+
+                                      <input type="text" id="atbdp_website" name="website" value="" class="form-control directory_field" placeholder="Listing Website eg. http://example.com">
+                                  </div>
+                              
+                              <div class="form-group" id="atbdp_socialInFo">
+                                      <label for="atbdp_social">Social Information:</label>
+                                       <div class="col-12">
+              
+              
+
+                <!-- <app-addnew></app-addnew> -->
+                <app-practice></app-practice>
+            </div>
+
+            
+            
+                                           
+
+
+
+                                           
+
+
+                              </div>
+                          </div>
+                      </div>
+
+
+
+
+
+                      <div class="atbd_content_module atbd_business_hour_module ">
+                        <div class="atbd_content_module__tittle_area">
+                            <div class="atbd_area_title">
+                                <h4 class="atbd_wrapper1">Opening/Business Hour Information</h4>
+                            </div>
+                        </div>
+
+                        <div class="atbdb_content_module_contents">
+                          <div class="row">
+                         
+
+                            <div class="col-md-12">
+                            <div class="business-hour">
+                            <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                            <div class="enable247hour">
+                                <mat-checkbox >
+                                    <p class="atbd_wrapper1" >
+
+                                    Hide business hours
+                                  </p>
+                                </mat-checkbox><br>
+                                
+                               
+                            </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                            <div class="enable247hour">
+                                <mat-checkbox class="hello" style="white-space:inherit">
+                                  <p class="atbd_wrapper1" style="white-space: initial;">
+                                    Is this listing open 24 hours 7 days a weeks?</p>
+                                  </mat-checkbox>
+                                  <br>
+                                
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-md-6 col-sm-12">
+
+                            <div class="form-group">
+                                <label for="bdbh_monday" class="atbd_day_label">Monday</label>
+                                <div class="row atbd_row_bg">
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_monday">Start time</label>
+                                        <input type="time" id="bdbh_monday" name="bdbh[monday][start]" value="" class="form-control directory_field">
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_monday_cls">Close time</label>
+                                        <input type="time" id="bdbh_monday_cls" name="bdbh[monday][close]" value="" class="form-control directory_field">
+                                    </div>
+                                </div>
+
+                                <label for="tue_cls" class="atbd_mark_as_closed">
+                                    <input type="checkbox" name="bdbh[tuesday][remain_close]" 
+                                    value="1" id="tue_cls"> Mark as Closed 
+                                    <span class="cf-select"></span></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bdbh_tuesday" class="atbd_day_label">Tuesday</label>
+                                <div class="row atbd_row_bg">
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_tuesday">Start time</label>
+                                        <input type="time" id="bdbh_tuesday" name="bdbh[tuesday][start]" value="" class="form-control directory_field">
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_tuesday_cls">Close time</label>
+                                        <input type="time" id="bdbh_tuesday_cls" name="bdbh[tuesday][close]" value="" class="form-control directory_field">
+                                    </div>
+                                </div>
+
+
+                                <label for="tue_cls" class="atbd_mark_as_closed">
+                                  <input type="checkbox" name="bdbh[tuesday][remain_close]" 
+                                  value="1" id="tue_cls"> Mark as Closed 
+                                  <span class="cf-select"></span></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bdbh_wednesday" class="atbd_day_label">Wednesday</label>
+                                <div class="row atbd_row_bg">
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_wednesday">Start time</label>
+                                        <input type="time" id="bdbh_wednesday" name="bdbh[wednesday][start]" value="" class="form-control directory_field">
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_wednesday_cls">Close time</label>
+                                        <input type="time" id="bdbh_wednesday_cls" name="bdbh[wednesday][close]" value="" class="form-control directory_field">
+                                    </div>
+                                </div>
+
+
+                                <label for="wed_cls" class="atbd_mark_as_closed"><input type="checkbox" name="bdbh[wednesday][remain_close]" value="1" id="wed_cls"> Mark as Closed <span class="cf-select"></span></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bdbh_thursday" class="atbd_day_label">Thursday</label>
+                                <div class="row atbd_row_bg">
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_thursday">Start time</label>
+                                        <input type="time" id="bdbh_thursday" name="bdbh[thursday][start]" value="" class="form-control directory_field">
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_thursday_cls">Close time</label>
+                                        <input type="time" id="bdbh_thursday_cls" name="bdbh[thursday][close]" value="" class="form-control directory_field">
+                                    </div>
+                                </div>
+
+
+                                <label for="thu_cls" class="atbd_mark_as_closed"><input type="checkbox" name="bdbh[thursday][remain_close]" value="1" id="thu_cls"> Mark as Closed <span class="cf-select"></span></label>
+                            </div>
+                            </div> <!--ends col-md-6 col-sm-12-->
+
+                            <div class="col-md-6 col-sm-12">
+
+                            <div class="form-group">
+                                <label for="bdbh_friday" class="atbd_day_label">Friday</label>
+                                <div class="row atbd_row_bg">
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_friday">Start time</label>
+                                        <input type="time" id="bdbh_friday" name="bdbh[friday][start]" value="" class="form-control directory_field">
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-12 sol-sm-12">
+                                        <label for="bdbh_friday_cls">Close time</label>
+                                        <input type="time" id="bdbh_friday_cls" name="bdbh[friday][close]" value="" class="form-control directory_field">
+                                    </div>
+                                </div>
+
+                                <label for="fri_cls" class="atbd_mark_as_closed"><input type="checkbox" name="bdbh[friday][remain_close]" value="1" id="fri_cls"> Mark as Closed <span class="cf-select"></span></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bdbh_saturday" class="atbd_day_label">Saturday</label>
+                                <div class="row atbd_row_bg">
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <label for="bdbh_saturday">Start time</label>
+                                        <input type="time" id="bdbh_saturday" name="bdbh[saturday][start]" value="" class="form-control directory_field">
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <label for="bdbh_saturday_cls">Close time</label>
+                                        <input type="time" id="bdbh_saturday_cls" name="bdbh[saturday][close]" value="" class="form-control directory_field">
+                                    </div>
+                                </div>
+
+                                <label for="sat_cls" class="atbd_mark_as_closed"><input type="checkbox" name="bdbh[saturday][remain_close]" value="1" id="sat_cls"> Mark as Closed <span class="cf-select"></span></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bdbh_sunday" class="atbd_day_label">Sunday</label>
+                                <div class="row atbd_row_bg">
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <label for="bdbh_sunday">Start time</label>
+                                        <input type="time" id="bdbh_sunday" name="bdbh[sunday][start]" value="" class="form-control directory_field">
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <label for="bdbh_sunday_cls">Close time</label>
+                                        <input type="time" id="bdbh_sunday_cls" name="bdbh[sunday][close]" value="" class="form-control directory_field">
+                                    </div>
+                                </div>
+
+
+                                <label for="sun_cls" class="atbd_mark_as_closed"><input type="checkbox" name="bdbh[sunday][remain_close]" value="1" id="sun_cls"> Mark as Closed <span class="cf-select"></span></label>
+                            </div>
+                            </div> <!--ends col-md-6 col-sm-12-->
+
+                            </div> <!--ends .row-->
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="atbd_content_module atbd_contact_information">
+                        <div class="atbd_content_module__tittle_area">
+                            <div class="atbd_area_title">
+                                <h4 class="atbd_wrapper1">Map</h4>
+                            </div>
+                        </div>
+
+                        <div class="atbdb_content_module_contents">
+                                <div class="form-group" id="atbdp_address">
+                                    <label for="address">Address:</label>
+                                    <input type="text" name="address" id="address"
+                                    value="" class="form-control directory_field"
+                                     placeholder="Listing address eg. New York, USA">
+                                    <div id="result">
+                                        <ul></ul>
+                                    </div>
+                                </div>
+
+                                <!--Show map only if it is not disabled in the settings-->
+                                <!--Google map will be generated here using js-->
+                                            <div class="form-group">
+                                       
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group hide-map-option">
+                                                    <input type="checkbox" name="hide_map" value="1" id="hide_map">
+                                                    <label for="hide_map">   Generate On Map </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group hide-map-option">
+                                                    <input type="checkbox" name="hide_map" value="1" id="hide_map">
+                                                    <label for="hide_map">  Hide Map </label>
+                                                </div>
+                                            </div>
+                                        </div> <!--ends .row-->
+                                    </div><!--ends .row-->
+                                                                        </div>
+                    </div>
+
+                  <div class="atbd_content_module atbd_wrapper1">
+                    <div class="atbd_content_module__tittle_area atbd_wrapper1">
+                        <div class="atbd_area_title">
+                            <h4 class="atbd_wrapper1">Listings FAQs</h4>
+
+                        </div>
+                       
+                        
+                    </div>
+                    <div class="atbdb_content_module_contents"> 
+                      <app-faqs></app-faqs>
+                    </div>
+                  </div>
+
+
+
+
+                    <div class="atbd_content_module">
+                        <div class="atbd_content_module__tittle_area">
+                            <div class="atbd_area_title">
+                                <h4 class="atbd_wrapper1">
+                                    Images &amp; Video</h4>
+                            </div>
+                        </div>
+
+                        <div class="atbdb_content_module_contents atbdp_video_field">
+                            <!--Image Uploader-->
+                                                                                <div id="_listing_gallery">
+                                    <div class="add_listing_form_wrapper" id="gallery_upload">
+<div class="form-group">
+<!-- image container, which can be manipulated with js -->
+
+<!--  add & remove image links -->
+<p class="hide-if-no-js">
+  
+<a  class="upload-header btn btn-secondary" style="color: #fff;">Upload Preview Image</a> <br>
+</p>
+</div>
+<div class="form-group atbd_wrapper1">
+<app-img></app-img>
+</div>
+</div> <!--ends add_listing_form_wrapper-->
+
+
+                                </div>
+                                <br>
+                                                                                                                                                                                <div class="form-group">
+                                    <label for="videourl">Video Url:</label>
+                                    <input type="text" id="videourl" name="videourl" 
+                                    value="" class="form-control directory_field"
+                                    placeholder="Only YouTube &amp; Vimeo URLs.">
+                                </div>
+                                                                                                                            </div>
+                    </div>
+
+
+                   
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+                    
+
+                    <div class="btn_wrap list_submit" style="text-align:center;">
+                        <mat-checkbox><p class="atbd_wrapper1">
+                          I accept all Terms & Conditions</p>
+                        </mat-checkbox><br>
+                      
+                      <button type="submit" class="btn btn-primary btn-lg listing_submit_btn">
+                        Submit listing</button>
+                    </div>
+                    
+
+
+
+
+
+
+
+
+
+                    <!-- <label class="hoverable" for="fileInput">
+                        <img [src]="url ? url : 'https://www.w3schools.com/howto/img_avatar.png'"> 
+                        <div class="hover-text">
+                          Choose file
+                          <h4 class="success-message" *ngIf="url"> Uploaded Successfully </h4>
+                          </div>
+                        <div class="background"></div>
+                      </label>
+                      <br/>
+                      <input id="fileInput" type='file' (change)="onSelectFile($event)">
+                      <button *ngIf="url" (click)="delete()">delete</button> -->
+
+
+
+
+
+
+                    
+
+
+
+
+
+
+
+
+                    </div>
+                    
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+                            
+
+
+  
